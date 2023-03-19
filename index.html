@@ -1,0 +1,1873 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>AIMSA</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="style1.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+
+<style>
+	/* #top::before {
+		content: "";
+		position: absolute;
+		display: block;
+		background-color: #000000;
+		background-image: url("images/Aimsabg.png");
+		opacity: 1;
+		top: 0;
+		left: -7.vw;
+		height: 100%;
+		width:100%;
+		background-size:contain;
+		background-repeat: no-repeat;
+		overflow:hidden;
+		z-index: -1;
+		background-position: center;
+	} */
+	html {
+		scroll-behavior: smooth;
+	}
+
+	h3{
+		font-weight: normal;
+		color: #000232;
+		font-size: 1.25em;
+	}
+
+	#top {
+		position: relative;
+		background-color: #000000;
+		/* align-items: center; */
+	}
+
+	#top video {
+		width: 100vw;
+		top: 0;
+		left: 0;
+		position: absolute;
+		animation: anv 2s 9s forwards linear;
+	}
+
+
+
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+	#footer footer {
+		position: relative;
+		background: #000127;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+	}
+
+	footer::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 100px;
+		height: 1px;
+		width: 100%;
+		background: #AFAFB6;
+	}
+
+	footer .content {
+		max-width: 1250px;
+		margin: auto;
+		padding: 30px 40px 40px 40px;
+	}
+
+	footer .content .top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+
+	.content .top .logo-details {
+		color: #fff;
+		font-size: 30px;
+	}
+
+	.content .top .media-icons {
+		display: flex;
+	}
+
+	.content .top .media-icons a {
+		height: 40px;
+		width: 40px;
+		margin: 0 8px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 40px;
+		color: #fff;
+		font-size: 17px;
+		text-decoration: none;
+		transition: all 0.4s ease;
+	}
+
+	.top .media-icons a:nth-child(1) {
+		background: #000000;
+	}
+
+	.top .media-icons a:nth-child(1):hover {
+		color: #4267B2;
+		background: #fff;
+	}
+
+	.top .media-icons a:nth-child(2) {
+		background: #1DA1F2;
+	}
+
+	.top .media-icons a:nth-child(2):hover {
+		color: #1DA1F2;
+		background: #fff;
+	}
+
+	.top .media-icons a:nth-child(3) {
+		background: #E1306C;
+	}
+
+	.top .media-icons a:nth-child(3):hover {
+		color: #E1306C;
+		background: #fff;
+	}
+
+	.top .media-icons a:nth-child(4) {
+		background: #0077B5;
+	}
+
+	.top .media-icons a:nth-child(4):hover {
+		color: #0077B5;
+		background: #fff;
+	}
+
+	.top .media-icons a:nth-child(5) {
+		background: #FF0000;
+	}
+
+	.top .media-icons a:nth-child(5):hover {
+		color: #FF0000;
+		background: #fff;
+	}
+
+	footer .content .link-boxes {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	footer .content .link-boxes .box {
+		width: calc(100% / 5 - 10px);
+	}
+
+	.content .link-boxes .box .link_name {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 400;
+		margin-bottom: 10px;
+		position: relative;
+	}
+
+	.link-boxes .box .link_name::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		height: 2px;
+		width: 35px;
+		background: #fff;
+	}
+
+	.content .link-boxes .box li {
+		margin: 6px 0;
+		list-style: none;
+	}
+
+	.content .link-boxes .box li a {
+		color: #fff;
+		font-size: 14px;
+		font-weight: 400;
+		text-decoration: none;
+		opacity: 0.8;
+		transition: all 0.4s ease
+	}
+
+	.content .link-boxes .box li a:hover {
+		opacity: 1;
+		text-decoration: underline;
+	}
+
+	.content .link-boxes .input-box {
+		margin-right: 55px;
+	}
+
+	.link-boxes .input-box input {
+		height: 40px;
+		width: calc(100% + 55px);
+		outline: none;
+		border: 2px solid #AFAFB6;
+		background: #140B5C;
+		border-radius: 4px;
+		padding: 0 15px;
+		font-size: 15px;
+		color: #fff;
+		margin-top: 5px;
+	}
+
+	.link-boxes .input-box input::placeholder {
+		color: #AFAFB6;
+		font-size: 16px;
+	}
+
+	.link-boxes .input-box input[type="button"] {
+		background: #fff;
+		color: #140B5C;
+		border: none;
+		font-size: 18px;
+		font-weight: 500;
+		margin: 4px 0;
+		opacity: 0.8;
+		cursor: pointer;
+		transition: all 0.4s ease;
+	}
+
+	.input-box input[type="button"]:hover {
+		opacity: 1;
+	}
+
+	footer .bottom-details {
+		width: 100%;
+		background: #0F0844;
+	}
+
+	footer .bottom-details .bottom_text {
+		max-width: 1250px;
+		margin: auto;
+		padding: 20px 40px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.bottom-details .bottom_text span,
+	.bottom-details .bottom_text a {
+		font-size: 14px;
+		font-weight: 300;
+		color: #fff;
+		opacity: 0.8;
+		text-decoration: none;
+	}
+
+	.bottom-details .bottom_text a:hover {
+		opacity: 1;
+		text-decoration: underline;
+	}
+
+	.bottom-details .bottom_text a {
+		margin-right: 10px;
+	}
+
+	@media (max-width: 4000px) {
+		/* #footer{
+			margin-left: 75px;
+		} */
+	}
+
+	@media (max-width: 961px) {
+		#footer {
+			margin-left: 0px;
+		}
+
+		footer .content .link-boxes {
+			flex-wrap: wrap;
+		}
+
+		footer .content .link-boxes .input-box {
+			width: 40%;
+			margin-top: 10px;
+		}
+	}
+
+	@media (max-width: 700px) {
+		footer {
+			position: relative;
+		}
+
+		.content .top .logo-details {
+			font-size: 26px;
+		}
+
+		.content .top .media-icons a {
+			height: 35px;
+			width: 35px;
+			font-size: 14px;
+			line-height: 35px;
+		}
+
+		footer .content .link-boxes .box {
+			width: calc(100% / 3 - 10px);
+		}
+
+		footer .content .link-boxes .input-box {
+			width: 60%;
+		}
+
+		.bottom-details .bottom_text span,
+		.bottom-details .bottom_text a {
+			font-size: 12px;
+		}
+	}
+
+	@media (max-width: 520px) {
+		footer::before {
+			top: 145px;
+		}
+
+		footer .content .top {
+			flex-direction: column;
+		}
+
+		.content .top .media-icons {
+			margin-top: 16px;
+		}
+
+		footer .content .link-boxes .box {
+			width: calc(100% / 2 - 10px);
+		}
+
+		footer .content .link-boxes .input-box {
+			width: 100%;
+		}
+	}
+
+	.menu {
+		display: none;
+		/* border: 2px solid yellow; */
+		margin: 0px;
+		margin-right: 10px;
+		padding: 0px;
+	}
+
+	.top_na:hover~.menu,
+	.menu:hover {
+		display: block;
+		font-size: 25px;
+	}
+
+	.our-team {
+		padding: 30px 0 40px;
+		margin-bottom: 30px;
+		background-color: #f7f5ec;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.our-team1 {
+		padding: 30px 0 40px;
+		margin-bottom: 30px;
+		background-color: #f7f5ec;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.our-team .picture {
+		display: inline-block;
+		height: 130px;
+		width: 130px;
+		margin-bottom: 50px;
+		z-index: 1;
+		position: relative;
+	}
+
+	.our-team1 .picture {
+		display: inline-block;
+		height: 130px;
+		width: 130px;
+		margin-bottom: 50px;
+		z-index: 1;
+		position: relative;
+	}
+
+	.our-team .picture::before {
+		content: "";
+		width: 100%;
+		height: 0;
+		border-radius: 50%;
+		background-color: #1369ce;
+		position: absolute;
+		bottom: 135%;
+		right: 0;
+		left: 0;
+		opacity: 0.9;
+		transform: scale(3);
+		transition: all 0.3s linear 0s;
+	}
+
+	.our-team1 .picture::before {
+		content: "";
+		width: 100%;
+		height: 0;
+		border-radius: 50%;
+		background-color: #1369ce;
+		position: absolute;
+		bottom: 135%;
+		right: 0;
+		left: 0;
+		opacity: 0.9;
+	}
+
+	.our-team:hover .picture::before {
+		height: 100%;
+	}
+
+	.our-team .picture::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: #1369ce;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	.our-team .picture img {
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+		transform: scale(1);
+		transition: all 0.9s ease 0s;
+	}
+
+	.our-team1 .picture img {
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+		border: 2px solid #00046f;
+		transform: scale(1);
+	}
+
+	.our-team:hover .picture img {
+		box-shadow: 0 0 0 14px #f7f5ec;
+		transform: scale(0.7);
+	}
+
+	.our-team .title {
+		display: block;
+		font-size: 15px;
+		color: #4e5052;
+		text-transform: capitalize;
+	}
+
+	.our-team .social {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		background-color: #1369ce;
+		position: absolute;
+		bottom: -100px;
+		left: 0;
+		transition: all 0.5s ease 0s;
+	}
+
+	.our-team:hover .social {
+		bottom: 0;
+	}
+
+	.our-team .social li {
+		display: inline-block;
+	}
+
+	.our-team .social li a {
+		display: block;
+		padding: 10px;
+		font-size: 17px;
+		color: white;
+		transition: all 0.3s ease 0s;
+		text-decoration: none;
+	}
+
+	.our-team .social li a:hover {
+		color: #1369ce;
+		background-color: #f7f5ec;
+	}
+
+	.last_row{
+		display: flex;
+		justify-content: center;
+	}
+
+	@media screen and (max-width:4000px) and (min-width:961px) {
+		#main {
+			margin-left: 75px;
+		}
+
+		#header {
+			background-color: #000000dc;
+			width: 75px;
+		}
+
+		#nav span p {
+			visibility: hidden;
+			margin: 0px;
+		}
+
+		#header :hover span p {
+			animation: texvis .3s .3s forwards linear;
+		}
+
+		@keyframes texvis {
+			0% {
+				visibility: hidden;
+			}
+
+			100% {
+				visibility: visible;
+			}
+		}
+
+		#header:hover~#main {
+			animation: main1 .3s 1 forwards linear;
+		}
+
+		#header:hover {
+			animation: nav .3s 1 forwards linear;
+		}
+
+		#logo h1,
+		#logo p {
+			display: none;
+		}
+
+		#header:hover #logo h1,
+		#header:hover #logo p {
+			display: block;
+		}
+
+	}
+
+	@media screen and (max-width: 960px) {
+		#main {
+			margin-left: 0px;
+		}
+
+		#header {
+			background-color: #00004e;
+			width: 275px;
+		}
+
+		#header span p {
+			visibility: visible;
+		}
+		
+	}
+
+	#header {
+		background-color: #00004e;
+	}
+
+	@keyframes nav {
+		0% {
+			width: 75px;
+		}
+
+		100% {
+			width: 250px;
+		}
+	}
+
+	@keyframes main1 {
+		0% {
+			margin-left: 75px;
+		}
+
+		100% {
+			margin-left: 250px;
+		}
+	}
+
+	header>p {
+		position: absolute;
+		bottom: 1em;
+	}
+
+	@keyframes anv {
+		0% {
+			width: 100vw;
+		}
+
+		100% {
+			width: 0px
+		}
+
+		;
+	}
+
+	#top {
+		height: 100vh;
+		position: fixed;
+		width: 100vw;
+		z-index: 3;
+		animation: ant 1s 11s forwards linear;
+
+	}
+
+	@keyframes ant {
+		0% {
+			height: 100vh;
+			background-color: #000000;
+		}
+
+		100% {
+			height: 10vw;
+			background-color: #000942e0;
+		}
+	}
+
+	#main section.one {
+		background-color: black;
+		opacity: 1;
+		animation: ant 1s 10s forwards linear;
+
+	}
+
+	#main>section.cover {
+		padding: 0;
+	}
+
+	#logo img {
+		opacity: 0;
+		animation: anl 1s 11s forwards ease-in;
+	}
+
+	@keyframes anl {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1
+		}
+	}
+
+	.sdw {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#top .fix_dis {
+		top: 0;
+		left: 0;
+		display: flex;
+		margin: auto;
+		margin-left: 4.5vh;
+		padding: 3vw;
+		font-size: 3vw;
+		/* align-items: end; */
+		align-self: center;
+		opacity: 0;
+		justify-content: space-between;
+		animation: makevis 1s 11s forwards linear;
+
+
+	}
+	@media screen and (max-width: 786px) {
+		#top.fix_dis{
+			padding-top: 2vh;
+			font-size:7em;
+		}
+	}
+
+	.fix_dis p {
+		margin-left: 4em;
+	}
+
+	#top {
+		margin-left: 1em;
+	}
+
+	/* faculty css */
+	.container11 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.message {
+		margin: 10px 10px;
+		text-align: justify;
+	}
+
+	.team-content {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	#faculty {
+		display: block;
+		height: auto;
+	}
+
+	.our-team1:hover {
+		border-radius: 5px;
+		box-shadow: 0px 0px 5px 5px #140B5C;
+	}
+
+	/* #faculty img{
+		width: 10vw;
+		height: 10vw;
+	} */
+
+	#container1 {
+		/* font-size: 0.75em; */
+		position: relative;
+		margin-right: 1em;
+		visibility: visible;
+		/* opacity: 0; */
+		width: 10em;
+	}
+
+	@media screen and (min-width:1319px) {
+		#container1 {
+			margin-right: 0px;
+		}
+
+	}
+
+	#container1::after {
+		position: absolute;
+		content: "Upcoming Events";
+		top: 0;
+		left: 0;
+		width: fit-content;
+		/* animation: makevis 1s forwards linear; */
+
+	}
+
+	#container1.fac::after {
+		position: absolute;
+		content: "Faculty's Desk";
+		top: 0;
+		left: 0;
+		/* animation: makevis 1s forwards linear; */
+
+	}
+
+	#container1.abt::after {
+		position: absolute;
+		content: "About Us";
+		top: 0;
+		left: 0;
+		/* animation: makevis 1s forwards linear; */
+
+	}
+
+	#container1.team::after {
+		position: absolute;
+		content: "Our Team";
+		top: 0;
+		left: 0;
+		/* animation: makevis 1s forwards linear; */
+	}
+
+	@keyframes makevis {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	#footer {
+		width: 100%;
+	}
+
+	.container_m {
+		display: flex;
+		width: 100%;
+		padding: 4% 2%;
+		box-sizing: border-box;
+		height: 95vh;
+		flex-wrap: wrap;
+	}
+
+	.box1 {
+		flex: 1;
+		overflow: hidden;
+		transition: .5s;
+		margin: 0 0.6%;
+		box-shadow: 0 20px 30px rgba(0, 0, 0, 0.250);
+		line-height: 0;
+		min-width: 150px;
+	}
+
+	.box1>img {
+		width: 200%;
+		height: calc(100% - 15vh);
+		object-fit: cover;
+		transition: .5s;
+	}
+
+	.box1>span {
+		font-size: 3.8vh;
+		display: block;
+		text-align: center;
+		height: 10vh;
+		line-height: 2.6;
+	}
+
+	.box1:hover {
+		flex: 1 1 50%;
+	}
+
+	.box1:hover>img {
+		width: 100%;
+		height: 100%;
+	}
+
+	@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+	@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+	figure.snip1390 {
+		font-family: 'Roboto', Arial, sans-serif;
+		position: relative;
+		overflow: hidden;
+		margin: 10px;
+		min-width: 230px;
+		max-width: 475px;
+		/* max-height: 425px; */
+		/* height: 100%; */
+		width: 100%;
+		color: #000000;
+		text-align: center;
+		font-size: 16px;
+		background-color: #252661;
+		padding: 30px;
+		background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	figure.snip1390 *,
+	figure.snip1390 *:before,
+	figure.snip1390 *:after {
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-transition: all 0.35s ease;
+		transition: all 0.35s ease;
+	}
+
+	figure.snip1390 figcaption {
+		width: 100%;
+	}
+
+	figure.snip1390 h2,
+	figure.snip1390 h4,
+	figure.snip1390 blockquote {
+		margin: 0;
+	}
+
+	figure.snip1390 h2,
+	figure.snip1390 h4 {
+		font-weight: 300;
+	}
+
+	figure.snip1390 h2 {
+		color: #ffffff;
+	}
+
+	figure.snip1390 h4 {
+		color: #a6a6a6;
+	}
+
+	figure.snip1390 blockquote {
+		font-size: 1em;
+		padding: 45px 20px 40px 50px;
+		margin-top: 30px;
+		background-color: #ffffff;
+		border-radius: 5px;
+		box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+		text-align: left;
+		position: relative;
+		height: 25em;
+		overflow: scroll;
+	}
+
+	figure.snip1390 blockquote:before {
+		font-family: 'FontAwesome';
+		content: "\201C";
+		position: absolute;
+		font-size: 70px;
+		opacity: 0.25;
+		font-style: normal;
+		top: 0px;
+		left: 20px;
+	}
+
+	figure.snip1390 .profile {
+		width: 100px;
+		border-radius: 50%;
+		display: inline-block;
+		box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+		margin-bottom: 10px;
+		border: solid 5px #A6A57A;
+	}
+
+	.snip1390 {
+		width: fit-content;
+	}
+
+	#section {
+		background-color: #00000000;
+	}
+
+	blockquote{
+		overflow: scroll;
+	}
+
+	/* body{
+	background-image: url("images/header.png");
+} 
+*/
+	blockquote::-webkit-scrollbar{
+		width: 0;
+	}
+
+	#header::-webkit-scrollbar{
+		width: 0;
+	}
+
+	.credit {
+		padding: 30px 15px 0 15px;
+		text-align: center;
+		font-size: 30px;
+		font-weight: 400;
+	}
+
+	.credit a {
+		font-weight: 900;
+		color: #000000;
+		text-decoration: underline;
+	}
+
+	.container12 {
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	@media (min-width: 576px) {
+		.container12 {
+			max-width: 540px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.container12 {
+			max-width: 720px;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.container12 {
+			max-width: 960px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.container12 {
+			max-width: 1140px;
+		}
+	}
+
+	.row12 {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	.column12 {
+		position: relative;
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	/* @media (min-width: 576px) {
+		.column12 {
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.column12 {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.column12 {
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+		}
+	} */
+
+	.section-title {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		padding: 45px 0 30px 0;
+	}
+
+	.section-title::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 1px;
+		left: 0;
+		background: #eeeeee;
+	}
+
+	.section-title h1 {
+		color: #353535;
+		font-size: 50px;
+		letter-spacing: 5px;
+		margin-bottom: 5px;
+	}
+
+	@media(max-width: 767.98px) {
+		.section-title h1 {
+			font-size: 40px;
+			letter-spacing: 3px;
+		}
+	}
+
+	@media(max-width: 567.98px) {
+		.section-title h1 {
+			font-size: 30px;
+			letter-spacing: 2px;
+		}
+	}
+
+
+	.effect-10 {
+		position: relative;
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+
+	.effect-10 .effect-img {
+		position: relative;
+		font-size: 0;
+		overflow: hidden;
+	}
+
+	.effect-10 .effect-img img {
+		position: relative;
+		width: 100%;
+		height: auto;
+		transition: .5s;
+	}
+
+	.effect-10:hover .effect-img img {
+		transform: scale(1.2);
+	}
+
+	.effect-10 .effect-text {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background: rgba(0, 0, 0, .1);
+		transition: .5s;
+	}
+
+	.effect-10 .effect-text h2 {
+		color: #ffffff;
+		font-size: 25px;
+		margin: 0;
+	}
+
+	.effect-10 .effect-detail {
+		position: relative;
+		width: 0;
+		height: 0;
+		display: flex;
+		align-items: center;
+		background: rgba(0, 0, 0, .5);
+		overflow: hidden;
+		transition: .5s;
+		z-index: 1;
+	}
+
+	.effect-10 .effect-detail:before,
+	.effect-10 .effect-detail:after {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 0;
+		content: '';
+	}
+
+	.effect-10 .effect-detail:before {
+		border-top: 3px solid #ffffff;
+		border-right: 3px solid #ffffff;
+		left: -100%;
+		top: 0;
+	}
+
+	.effect-10 .effect-detail:after {
+		border-bottom: 3px solid #ffffff;
+		border-left: 3px solid #ffffff;
+		left: 100%;
+		bottom: 0;
+	}
+
+	@-webkit-keyframes left-up {
+		0% {
+			left: 100%;
+			height: 0;
+		}
+
+		50% {
+			left: 0;
+			height: 0;
+		}
+
+		100% {
+			height: 100%;
+			left: 0;
+		}
+	}
+
+	@-webkit-keyframes right-dn {
+		0% {
+			left: -100%;
+			height: 0;
+		}
+
+		50% {
+			left: 0;
+			height: 0;
+		}
+
+		100% {
+			height: 100%;
+			left: 0;
+		}
+	}
+
+	.effect-10:hover .effect-detail {
+		margin-top: 15px;
+		opacity: 1;
+	}
+
+	.effect-10:hover .effect-detail:after,
+	.effect-10:hover .effect-detail:before {
+		animation-delay: .2s;
+		animation-duration: .7s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards
+	}
+
+	.effect-10:hover .effect-detail:after {
+		animation-name: left-up;
+	}
+
+	.effect-10:hover .effect-detail:before {
+		animation-name: right-dn;
+	}
+
+	.effect-10 .effect-text p {
+		color: #ffffff;
+		font-size: 16px;
+		padding: 0 30px;
+		margin: 0;
+		opacity: 0;
+		transform: scale(0);
+		transition: .5s;
+		transition-delay: .2s;
+	}
+
+	.effect-10:hover .effect-detail {
+		width: 100%;
+		height: calc(100% - 45px);
+	}
+
+	.effect-10:hover .effect-detail p {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	/* section.one#top{
+		height: 10vw;
+	} */
+
+	
+</style>
+
+<script>
+	const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+	const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+	window.onscroll = function () { myFunction() };
+
+	function myFunction() {
+		if (document.documentElement.scrollTop < vh) {
+			document.getElementById("container1").className = "";
+		}
+		if (document.documentElement.scrollTop > vh) {
+			document.getElementById("container1").className = "fac";
+		}
+		if (document.documentElement.scrollTop > 2 * vh) {
+			document.getElementById("container1").className = "abt";
+		}
+		if (document.documentElement.scrollTop > 3 * vh) {
+			document.getElementById("container1").className = "team";
+		}
+	}
+</script>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<div id="header">
+
+
+
+		<div class="top">
+
+			<!-- Logo -->
+			<div id="logo">
+				<span class="image avatar48"><img src="AIMSApng.png" alt="" /></span>
+				<h1 id="title">Welcome</h1>
+				<!-- <p>Hyperspace Engineer</p> -->
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<section class="top-nav">
+						<div class="top_na">
+							<li><a href="#top" id="top-link"><span class="icon solid fa-home">
+										<p>Home</p>
+									</span></a></li>
+						</div class="menu">
+						<ul class="menu">
+							<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-user fa-calendar-check-o">
+								<p>Upcoming
+									Events</p>
+							</span></a>
+					</li>
+							<li><a href="#about" id="about-link"><span class="icon solid fa-user">
+										<p>About Us</p>
+									</span></a>
+							</li>
+							<li><a href="#contact" id="contact-link"><span class="icon solid fa-user">
+										<p>Our
+											Team</p>
+									</span></a></li>
+									
+						</ul>
+						
+						<li><a href="activities.html" id="contact-link"><span class="icon solid fa-th ">
+									<p>Activities</p>
+								</span></a>
+						</li>
+						<li><a href="news.html" id="contact-link"><span class="icon solid fa-user fa-newspaper-o ">
+									<p>News</p>
+								</span></a>
+						</li>
+
+					</section>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- <div class="bottom">
+
+			<ul class="icons"></ul>
+			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+			<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+			<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+
+		</div> -->
+
+	</div>
+
+
+	<!-- Main -->
+
+
+	<div id="main">
+		<!-- Intro -->
+		<section id="top" class="one dark cover">
+			<div class="container">
+				<div class="fix_dis">
+					<div class="aim">
+						PCCoE's AiMSA
+					</div>
+					<div id="container1">
+					</div>
+				</div>
+				<header>
+					<!-- The video -->
+					<video autoplay muted id="myVideo">
+						<source src="AimsaBackground1.mkv" type="video/mp4">
+
+					</video>
+
+					<!-- <h2 class="alt">Welcome to <strong>AiMSA</strong> <a href="http://html5up.net/license"></a> <br />
+						<a href="http://html5up.net"></a> -->
+					<!-- </h2>
+					<p>Student Association Of Computer Science And Engineering(Artificial Intelligence And Machine
+						Learning)</p> -->
+					<!-- <div class="svg">
+						<svg id="Welcome" width="792" height="224" viewBox="0 0 792 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.9388 108.165C16.8585 98.7765 24.5808 88.1956 32.2696 77.8219C44.8118 60.8998 54.11 47.7296 66.1089 30.5587C78.7524 12.4655 74.9206 17.2693 67.4373 30.9782C50.0618 62.809 34.8757 95.8593 21.5025 129.56C20.4172 132.295 -8.5734 202.245 8.91758 196.12C32.0818 188.008 51.8845 162.955 65.5496 143.962C75.6988 129.857 96.1572 82.8586 93.6559 100.055C90.7301 120.17 79.9875 141.007 73.8696 160.253C73.0456 162.845 51.7678 214.706 70.5835 207.167C101.179 194.906 125.123 160.506 142.178 134.174C164.113 100.307 176.349 62.1905 186.295 23.4272C191.026 4.98888 179.509 25.4836 176.996 29.1604C162.255 50.7262 148.46 73.96 142.317 99.6357C136.958 122.035 143.426 154.859 170.703 159.204C186.638 161.742 203.525 156.965 217.198 148.857C226.567 143.3 245.964 128.35 244.674 114.877C243.964 107.455 224.96 112.266 222.022 113.199C204.893 118.643 195.01 134.587 188.322 150.255C183.261 162.113 176.212 181.058 182.589 193.813C193.01 214.654 227.626 198.406 240.48 190.527C295.809 156.611 336.417 101.252 353.184 38.8087C353.339 38.2323 361.357 3.78083 357.869 3.78082C352.394 3.78081 350.474 11.9492 347.661 16.6454C335.52 36.9145 326.335 58.7003 318.366 80.8982C310.019 104.148 303.106 128.18 296.832 152.073C293.436 165.004 287.909 180.484 287.323 193.952C287.052 200.198 291.216 206.187 297.181 208.145C312.971 213.33 327.139 194.437 334.866 184.094C350.915 162.613 363.491 128.172 387.303 113.899C394.405 109.642 400.268 111.749 405.761 116.555C409.201 119.565 409.04 128.226 413.592 127.812C416.458 127.551 413.362 108.565 412.473 106.907C404.951 92.8741 389.093 110.657 385.066 117.324C375.805 132.659 370.418 150.798 366.468 168.153C364.936 174.884 359.559 191.649 366.049 197.658C388.813 218.736 414.85 172.473 423.799 159.903C434.124 145.402 455.053 107.654 476.516 108.165C480.121 108.251 476.68 110.914 475.258 112.5C460.764 128.661 445.513 144.542 438.482 165.636C434.88 176.443 431.27 197.009 447.571 199.406C475.132 203.459 496.738 173.859 503.643 151.094C506.631 141.246 512.086 111.877 496.093 107.606C473.595 101.599 473.404 143.898 476.586 154.869C483.06 177.194 501.155 180.245 520.004 169.412C531.578 162.76 538.499 155.585 546.642 145.221C551.841 138.603 560.49 115.833 560.695 124.246C561.168 143.656 548.982 168.383 543.775 186.751C541.706 194.051 538.874 201.199 537.763 208.705C536.102 219.912 545.084 187.255 549.159 176.683C554.477 162.888 562.756 132.618 577.335 124.666C589.105 118.246 583.41 167.718 582.788 170.531C582.555 171.586 569.238 207.277 575.657 193.323C587.398 167.8 598.095 141.013 620.194 122.498C624.358 119.009 638.301 106.583 642.567 116.695C648.062 129.722 643.006 144.897 637.603 156.967C632.608 168.124 602.393 221.057 634.037 215.347C662.667 210.18 711.99 185.974 719.125 154.45C720.324 149.15 720.689 137.379 713.811 135.013C697.063 129.252 677.208 158.497 671.162 169.412C665.299 179.999 655.081 202.135 664.66 213.739C677.645 229.467 711.8 212.768 725.138 206.467C749.329 195.039 768.435 178.946 784.286 157.526C792.244 146.772 786.769 151.533 781.909 155.988" stroke="white" stroke-width="6" stroke-linecap="round"/>
+							</svg>
+
+							<svg id="To" width="314" height="230" viewBox="0 0 314 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M69.2988 93.3547C57.9274 93.3547 54.1747 90.825 46.4994 80.6948C35.8569 66.6483 21.6259 45.6693 42.7928 32.5099C66.1675 17.9779 103.786 17.5808 130.563 13.2617C143.163 11.2295 164.057 10.4044 176.022 4.08979C178.897 2.57278 168.94 2.66149 166.091 4.21898C129.852 24.0305 131.793 82.4003 129.305 115.057C125.941 159.198 127.676 213.288 67.7603 221.245C51.9225 223.348 -7.23101 222.209 4.53742 193.729C7.91215 185.563 33.1999 172.273 24.1197 174.739C11.7432 178.101 8.81604 198.701 12.5102 207.681C25.9511 240.354 75.7713 224.31 98.1127 212.202C133.978 192.765 160.303 167.317 202.458 159.367C206.452 158.614 236.381 154.362 215.606 159.496C192.659 165.168 172.292 174.767 162.315 196.055C132.559 259.538 259.577 201.105 232.251 183.266C230.448 182.088 209.68 180.402 219.383 186.237C231.574 193.568 250.186 190.665 263.023 187.399C280.669 182.91 296.483 174.026 311 164.276" stroke="white" stroke-width="5" stroke-linecap="round"/>
+								</svg>
+						</div> -->
+				</header>
+
+				<!-- <a href="#portfolio" class="button scrolly">Upcoming Events</a> -->
+			</div>
+
+		</section>
+
+		<!-- Portfolio -->
+		<section id="portfolio" class="two">
+			<div class="container">
+
+				<!-- <header>
+					<h2>Upcoming Events</h2>
+				</header> -->
+
+				<div class="container_m">
+					<div class="box1">
+						<img src="https://source.unsplash.com/1000x800">
+						<span>Event1</span>
+					</div>
+					<div class="box1">
+						<img src="https://source.unsplash.com/1000x802">
+						<span>Event2</span>
+					</div>
+					<div class="box1">
+						<img src="https://source.unsplash.com/1000x804">
+						<span>Event3</span>
+					</div>
+					<div class="box1">
+						<img src="https://source.unsplash.com/1000x806">
+						<span>Event4</span>
+					</div>
+				</div>
+
+
+
+			</div>
+		</section>
+
+		<section id="faculty" class="five">
+			<div class="container11">
+
+				<figure class="snip1390">
+					<img src="HOD.png" alt="profile-sample3" class="profile" />
+					<figcaption>
+						<h2>Dr. Anuradha Thakare</h2>
+						<h4>HOD</h4>
+						<blockquote>PCCOE offers a four-year under-graduate B.Tech course in Computer Science &
+							Engineering (Artificial Intelligence and Machine Learning) which aims to develop a strong
+							foundation by using the principles and technologies that consist of many facets of
+							Artificial Intelligence including logic, knowledge representation, probabilistic models, and
+							machine learning. Students will obtain an in-depth knowledge of machine learning and
+							artificial intelligence by implementing real-world problems in a wide variety of application
+							domains such as robotics, computer vision, natural language processing, etc. Students will
+							be experienced in machine learning pipeline, data, models, algorithms and empirics.
+						</blockquote>
+					</figcaption>
+				</figure>
+				<figure class="snip1390 hover"><img src="pallavidhade.jpg" alt="profile-sample5" class="profile" />
+					<!-- <figcaption> -->
+						<h2>Prof. Pallavi Dhade</h2>
+						<h4>SDW Co-ordinator</h4>
+						<blockquote>AiMSA is the Artificial Intelligence and Machine learning Students Association run by students of Department of Computer Science & Engineering (AI & ML) at PCCOE, Pune. Team AiMSA formed in December 2022 with the strong support of our respected HOD, Dr. Anuradha Thakare. The main objective of the AiMSA is to provide a platform to students to explore their skills and knowledge through curricular and extracurricular activities in the field of CSE (AI&ML). It is the managing body that handles all the events in the department. It introduced various Student Development Cells to the Department like Art Circle, Higher Studies, Communication and Personality Development Cell, Professional Development Cell, NSS and Sports Cell,  Coding Cell, Photography Cell and ISR.</blockquote>
+					<!-- </figcaption> -->
+				</figure>
+			</div>
+		</section>
+
+		<!-- About Me -->
+		<section id="about" class="three">
+			<div class="container12">
+
+				<div class="row12">
+
+					<div class="column12">
+						<div class="effect-10">
+							<div class="effect-img">
+								<img src="photo1-min.JPG" alt="Team Image">
+							</div>
+							<div class="effect-text">
+								<h2 style=" color: aliceblue; font-weight: normal; top: 0;">ABOUT US</h2>
+								<div class="effect-detail">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus
+										consectetur, interdum felis in, auctor ligula.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section id="contact" class="four">
+			<div class="container">
+
+				<!-- <header>
+					<h2>Our Team</h2>
+				</header> -->
+
+				<p>Elementum sem parturient nulla quam placerat viverra
+					mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
+					donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
+					orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+
+				<div class="container">
+					<div class="row">
+						<!-- atharva joshi -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="atharva.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Atharva Joshi</h3>
+									<h4 class="title">President</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/aj_stark007?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/atharva-joshi-4a759b243/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:atharva.joshi21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Parth Singhal -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="parth s.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Parth Singhal</h3>
+									<h4 class="title">Vice President</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/pxrths_?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/parth-singhal-69406b234/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:parth.singhal21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Lokesh Kad -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="lokesh.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Lokesh Kad</h3>
+									<h4 class="title">Secretary</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/_.lokesh_03?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/lokesh-kad-7b81b622a/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:lokesh.kad21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Soham Narsale -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="soham.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Soham Narsale</h3>
+									<h4 class="title">Secretary</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/narsale_soham?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/soham-narsale-386b26259/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:soham.narsale21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="row">
+						<!-- Shubham Singh -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="shubham.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Shubham Singh</h3>
+									<h4 class="title">Treasurer</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/shubhs__singh?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/shubham-singh-a6542922b/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:shubham.singh21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Vaibhav Gangurde -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="vaibhav.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Vaibhav Gangurde</h3>
+									<h4 class="title">Treasurer</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/_vaibhav_1729?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/vaibhav-gangurde-83291b260/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:vaibhav.gangurde21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Om Bhavsar -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="om.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Om Bhavsar</h3>
+									<h4 class="title">Design Head</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/ombhavsar3606?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/om-bhavsar-89241825a/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:om.bhavsar21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Tushar Garad -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="tushar.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Tushar Garad</h3>
+									<h4 class="title">Design Head</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/_vaibhav_1729?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/tushar-garad-1a8192236/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:tushar.garad21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Anurag Mishra -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="anurag.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Anurag Mishra</h3>
+									<h4 class="title">Social Media Head</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/__atmanirbhar___anurag?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/anurag-mishra-360041247/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:anurag.mishra21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Harshal Nikalje -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="harshal.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Harshal Nikalje</h3>
+									<h4 class="title">Social Media Head</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/rochat_mercer?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/harshal-nikalje-05355a231/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:harshal.nikalje21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Aarya Hire -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="arya.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Aarya Hire</h3>
+									<h4 class="title">Marketing and Sponsorship</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/aarya.2104?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/aarya-hire-b9ab66260"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:aarya.hire21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Jivan Karande -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="jivan.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Jivan Karande</h3>
+									<h4 class="title">Marketing and Sponsorship</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/jivankarande_21?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/jivan-karande-23a82022a/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:jivan.karande21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- Prathmesh Kolekar -->
+					<div class="row last_row">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="prathmesh.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Prathmesh Kolekar</h3>
+									<h4 class="title">Web Master</h4>
+								</div>
+								<ul class="social">
+									<li><a href="" class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/prathmesh-kolekar-796b85251/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:prathmesh.kolekar21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Parth Halwane -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="parth h.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Parth Halwane</h3>
+									<h4 class="title">Web Master</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/parth_halwane?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/parth-halwane-5250b722a/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:parth.halwane21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Parth Chitale -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="parth c.png">
+								</div>
+								<div class="team-content">
+									<h3 class="name">Parth Chitale</h3>
+									<h4 class="title">Managing Professional body Chairperson</h4>
+								</div>
+								<ul class="social">
+									<li><a href="https://instagram.com/_chitale_parth_?igshid=YmMyMTA2M2Y="
+											class="fab fa-instagram" aria-hidden="true"></a></li>
+									<li><a href="https://www.linkedin.com/in/parth-chitale-6a9355237/"
+											class="fab fa-linkedin" aria-hidden="true"></a></li>
+									<li><a href="mailto:parth.chitale21@pccoepune.org" class="fa fa-envelope me-3"
+											aria-hidden="true"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- Footer -->
+		<section id="footer" class="two" style="padding: 0;">
+			<footer>
+				<div class="content">
+					<div class="top">
+						<div class="logo-details">
+							<a href="http://www.pccoepune.com/"><img src="pccoelogo.webp" width="50px" height="50px"></img></a>
+							<!-- <span class="logo_name">AiMSA</span> -->
+						</div>
+						<div class="media-icons">
+							<!-- <a href="#"><i class="fab fa-facebook-f"></i></a>
+					  <a href="#"><i class="fab fa-twitter"></i></a> -->
+							<a href="https://instagram.com/pccoe_aimsa?igshid=YmMyMTA2M2Y="><i
+									class="fab fa-instagram"></i></a>
+							<a href="https://www.linkedin.com/company/pccoe-s-aimsa/"><i class="fab fa-linkedin-in"></i></a>
+							<a href="mailto:pccoeaimsa2022@gmail.com"><i class="fa fa-envelope me-3"></i></a>
+						</div>
+						<div class="logo-details">
+							<a href="http://www.pccoepune.com/"><img src="AIMSApng.png" width="50px" height="50px"></img></a>
+							<!-- <span class="logo_name">AiMSA</span> -->
+						</div>
+					</div>
+	
+	
+					<div class="link-boxes">
+						<ul class="box">
+							<li class="link_name">Quick links</li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="index.html"></a></li>
+							<li><a href="activities.html">Activities</a></li>
+							<li><a href="news.html">News</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- <div class="bottom-details">
+					<div class="bottom_text">
+						<span class="copyright_text">Copyright © 2021 <a href="#">Pccoe-AiMSA</a>All rights reserved</span>
+						<span class="policy_terms">
+							<a href="#">Privacy policy</a>
+							<a href="#">Terms & condition</a>
+						</span>
+					</div>
+				</div> -->
+			</footer>
+	
+			<!-- Copyright -->
+	
+		</div>
+	</section>
+	</div>
+
+	<!-- Copyright -->
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+
+	</div>
+</body>
+
+</html>
