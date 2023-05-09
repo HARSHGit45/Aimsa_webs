@@ -177,7 +177,7 @@
 		position: relative;
 	}
 
-	.link-boxes .box .link_name::before {
+	/* .link-boxes .box .link_name::before {
 		content: '';
 		position: absolute;
 		left: 0;
@@ -185,7 +185,10 @@
 		height: 2px;
 		width: 35px;
 		background: #fff;
-	}
+	} */
+	.box{
+        margin: auto;
+    }
 
 	.content .link-boxes .box li {
 		margin: 6px 0;
@@ -612,6 +615,7 @@
 
 		;
 	}
+	
 
 	#top {
 		height: 100vh;
@@ -629,7 +633,7 @@
 		}
 
 		100% {
-			height: 10vw;
+			height: 7vmax;
 			background-color: #000942e0;
 		}
 	}
@@ -1249,7 +1253,7 @@
   height: 1px;
 }
 .external {
-  overflow: hidden;
+  overflow: scroll;
   height: 100vh;
 }
 
@@ -1260,8 +1264,8 @@
   width: 100vh;
   transform: rotate(-90deg) translate3d(0,-100vh,0);
   transform-origin: right top;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-x: scroll;
   padding: 0;
   height: 100vw;
   perspective: 1px;
@@ -1401,11 +1405,11 @@ p {
 									</span></a></li>
 						</div class="menu">
 						<ul class="menu">
-							<li><a href="index.html" id="portfolio-link"><span class="icon solid fa-user fa-calendar-check-o">
+							<!-- <li><a href="index.html" id="portfolio-link"><span class="icon solid fa-user fa-calendar-check-o">
 								<p>Upcoming
 									Events</p>
 							</span></a>
-					</li>
+					</li> -->
 							<li><a href="index.html" id="about-link"><span class="icon solid fa-user">
 										<p>About Us</p>
 									</span></a>
