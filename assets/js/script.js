@@ -1,72 +1,46 @@
-const API_KEY = "385c894d47794e8f9f53d3dec8a47a21";
-const url = "https://newsapi.org/v2/everything?q=";
+const newsContainer = document.getElementById('news-container');
 
-window.addEventListener("load", () => fetchNews("AI OR ML OR deep learning OR generative AI"));
+fetch('news_data.json')
+    .then(response => response.json())
+    .then(data => {
+        let counter = 0; // Counter to track the number of articles displayed
+        data.forEach(article => {
+            if (counter >= 15) {
+                return; // Skip iteration if the desired limit is reached
+            }
 
-function reload() {
-    window.location.reload();
-}
+            const articleElement = document.createElement('div');
+            articleElement.classList.add('news-article');
 
-async function fetchNews(query) {
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const data = await res.json();
-    bindData(data.articles, 15); // Display only 10 news articles
-}
+            const linkElement = document.createElement('a');
+            linkElement.href = article.url;
+            linkElement.target = '_blank'; // Open link in a new tab
+            linkElement.style = ('text-decoration:none;')
 
-function bindData(articles, count) {
-    const cardsContainer = document.getElementById("cards-container");
-    const newsCardTemplate = document.getElementById("template-news-card");
+            const imageElement = document.createElement('img');
+            imageElement.classList.add('news-image');
+            imageElement.style = ('max-width: 275px; margin:auto;')
+            imageElement.src = article.image_url;
+            imageElement.alt = article.title;
 
-    cardsContainer.innerHTML = "";
+            const titleElement = document.createElement('h2');
+            titleElement.classList.add('news-title');
+            titleElement.textContent = article.title;
 
-    // Loop through the articles up to the specified count
-    for (let i = 0; i < count && i < articles.length; i++) {
-        const article = articles[i];
+            const descriptionElement = document.createElement('p');
+            descriptionElement.classList.add('news-description');
+            descriptionElement.textContent = article.description;
+            descriptionElement.style = ('text-decoration:none;')
 
-        if (!article.urlToImage) continue;
-        const cardClone = newsCardTemplate.content.cloneNode(true);
-        fillDataInCard(cardClone, article);
-        cardsContainer.appendChild(cardClone);
-    }
-}
+            linkElement.appendChild(imageElement);
+            linkElement.appendChild(titleElement);
+            linkElement.appendChild(descriptionElement);
+            articleElement.appendChild(linkElement);
+            newsContainer.appendChild(articleElement);
 
-function fillDataInCard(cardClone, article) {
-    const newsImg = cardClone.querySelector("#news-img");
-    const newsTitle = cardClone.querySelector("#news-title");
-    const newsSource = cardClone.querySelector("#news-source");
-    const newsDesc = cardClone.querySelector("#news-desc");
-
-    newsImg.src = article.urlToImage;
-    newsTitle.innerHTML = article.title;
-    newsDesc.innerHTML = article.description;
-
-    const date = new Date(article.publishedAt).toLocaleString("en-US", {
-        timeZone: "Asia/Jakarta",
+            counter++; // Increment the counter after displaying an article
+        });
+    })
+    .catch(error => {
+        console.log('Error fetching news data:', error);
     });
-
-    newsSource.innerHTML = `${article.source.name} · ${date}`;
-
-    cardClone.firstElementChild.addEventListener("click", () => {
-        window.open(article.url, "_blank");
-    });
-}
-
-let curSelectedNav = null;
-function onNavItemClick(id) {
-    fetchNews(id);
-    const navItem = document.getElementById(id);
-    curSelectedNav?.classList.remove("active");
-    curSelectedNav = navItem;
-    curSelectedNav.classList.add("active");
-}
-
-const searchButton = document.getElementById("search-button");
-const searchText = document.getElementById("search-text");
-
-searchButton.addEventListener("click", () => {
-    const query = searchText.value;
-    if (!query) return;
-    fetchNews(query);
-    curSelectedNav?.classList.remove("active");
-    curSelectedNav = null;
-});
