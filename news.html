@@ -838,7 +838,7 @@ html {
         margin: 10px;
     }
     .container-fluid img{
-        margin: 25px;
+        margin-top: 25px;
     }
     @media  screen and (min-width:960px) {
     .row{
@@ -879,8 +879,83 @@ html {
 		left: 0;
 		visibility: visible;
 	}
+	.img-responsive{
+		margin: auto;
+	}
+
+	:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container {
+    justify-content: space-around;
+	margin: 25px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 360px;
+	margin: 10px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 5px #c6d5e1;
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.card-header ~img {
+    /* width: 100%; */
+    height: 180px;
+    object-fit: cover;
+	max-width: 300px;
+	width: 200px;
+}
+
+.card-content {
+    padding: 12px;
+	max-height: 40vh;
+	text-align: justify;
+	overflow: scroll;
+}
+
+.news-source {
+    margin-block: 12px;
+}
+
+.card-content::-webkit-scrollbar {
+        width: 3px;
+    }
+
+#header::-webkit-scrollbar {
+		width: 0;
+	}
 
 }
+
 </style>
 <body class="is-preload">
 
@@ -965,71 +1040,50 @@ html {
 						<p>PCCOE's AiMSA</p>
 					</div>
 					<div id="container1">
-						News
+
 					</div>
 				</div>
-				<header>
-					</header>
+
 
 				<!-- <a href="#portfolio" class="button scrolly">Upcoming Events</a> -->
 			</div>
 
 		</section>
-
-		<!-- Portfolio -->
 		<section id="news" class="two">
 			<header></header>
-                <div class="container-fluid">
-                    <div class="row fh5co-post-entry">
-                        <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
-                            <figure>
-                                <a href="https://www.artificialintelligence-news.com/2023/01/20/google-speed-up-ai-releases-in-response-chatgpt/"><img src="google image.jpeg" alt="Image" class="img-responsive"></a>
-                            </figure>
-                            <span class="fh5co-meta"><a href="https://www.artificialintelligence-news.com/2023/01/20/google-speed-up-ai-releases-in-response-chatgpt/">Google's new AI tool</a></span>
-                            <!-- <h2 class="fh5co-article-title"><a href="single.html">Google to speed up AI releases in response to ChatGPTEat></h2> -->
-                            <span class="fh5co-meta fh5co-date">Feb 1st, 2023</span>
-                        </article>
-                        <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
-                            <figure>
-                                <a href="https://dataconomy.com/2022/12/what-is-chatsonic-ai-chatgpt-alternative/"><img src="chatgptvschatsonic.jpg" alt="Image" class="img-responsive"></a>
-                            </figure>
-                            <span class="fh5co-meta"><a href="https://dataconomy.com/2022/12/what-is-chatsonic-ai-chatgpt-alternative/">Chatgpt vs Chatsonic</a></span>
-                            <!-- <h2 class="fh5co-article-title"><a href="https://dataconomy.com/2022/12/what-is-chatsonic-ai-chatgpt-alternative/">Chatgpt vs Chatsonic</a></h2> -->
-                            <span class="fh5co-meta fh5co-date">Dec 22nd, 2022</span>
-                        </article>
-                        <div class="clearfix visible-xs-block"></div>
-                        <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
-                            <figure>
-                                <a href="https://www.analyticsinsight.net/top-5-artificial-intelligence-tools-that-have-the-potential-to-replace-humans/"><img src="aitools.jpg" alt="Image" class="img-responsive"></a>
-                            </figure>
-                            <span class="fh5co-meta"><a href="https://www.analyticsinsight.net/top-5-artificial-intelligence-tools-that-have-the-potential-to-replace-humans/">Can AI replace humans</a></span>
-                            <!-- <h2 class="fh5co-article-title"><a href="https://www.analyticsinsight.net/top-5-artificial-intelligence-tools-that-have-the-potential-to-replace-humans/">Top 5 Artificial Intelligence Tools that Have the Potential to Replace Humans</a></h2> -->
-                            <span class="fh5co-meta fh5co-date">Feb 4th, 2023</span>
-                        </article>
-                        <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
-                            <figure>
-                                <a href="https://dataconomy.com/2022/08/how-is-artificial-intelligence-used-in-the-military/"><img src="aimilitary.jpg" alt="Image" class="img-responsive"></a>
-                            </figure>
-                            <span class="fh5co-meta"><a href="https://dataconomy.com/2022/08/how-is-artificial-intelligence-used-in-the-military/">Guns and Codes: The era of AI-wars begins</a></span>
-                            <!-- <h2 class="fh5co-article-title"><a href="https://dataconomy.com/2022/08/how-is-artificial-intelligence-used-in-the-military/">How is artificial intelligence used in the military?</a></h2> -->
-                            <span class="fh5co-meta fh5co-date">Aug 17th, 2022</span>
-                        </article>
-
-            
-            
-                        <div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>
-             
-                        <div class="clearfix visible-xs-block"></div>
-                    </div>
-                </div>
-
-
-
-		
+							<div class="container-fluid">
+								<div class="row fh5co-post-entry">
+								   
+			
+					   
+					   
+									<div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>
+						 
+									<div class="clearfix visible-xs-block"></div>
+								</div>
+							</div>
+			
+			<main>
+			<div class="cards-container container11 flex" id="cards-container">
+			
+			</div>
+			</main>
+			
+			<template id="template-news-card">
+			<div class="card">
+			<div class="card-header">
+			<img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img" style="max-width: 300px;">
+			</div>
+			<div class="card-content" style="text-align: justify; margin: 20px;">
+			<h3 id="news-title"></h3>
+			<h6 class="news-source" id="news-source"></h6>
+			<p class="news-desc" id="news-desc"></p>
+			</div>
+			</div>
+			</template>
+			
+			<script src="script.js"></script>
 		</section>
-		
-
-	   </section>
 
 	
 
@@ -1044,7 +1098,7 @@ html {
 			<div class="content">
 				<div class="top">
 					<div class="logo-details">
-						<a href="http://www.pccoepune.com/"><img src="pccoelogo.webp" width="50px" height="50px"></img></a>
+						<a href="http://www.pccoepune.com/"><img src="PCCOE.png" width="50px" height="50px"></img></a>
 						<!-- <span class="logo_name">AiMSA</span> -->
 					</div>
 					<div class="media-icons">
@@ -1095,6 +1149,8 @@ html {
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/script.js"></script>
+
 
 
 	</div>
