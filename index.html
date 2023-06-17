@@ -372,6 +372,8 @@
         text-align: center;
         overflow: hidden;
         position: relative;
+        min-width: 300px;
+        margin: 10px;
     }
 
     .our-team1 {
@@ -1265,6 +1267,12 @@
             document.getElementById("container1").className = "team";
         }
     }
+    function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 </script>
 
 <body class="is-preload">
@@ -1288,7 +1296,7 @@
                 <ul>
                     <section class="top-nav">
                         <div class="top_na">
-                            <li><a href="#top" id="top-link"><span class="icon solid fa-home">
+                            <li onclick="scrollToTop()"><a href="#portfolio" id="top-link"><span class="icon solid fa-home">
                                         <p>Home</p>
                                     </span></a></li>
                         </div class="menu">
@@ -1714,7 +1722,7 @@
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name">Aarya Hire</h3>
-                                    <h4 class="title">Marketing and Sponsorship</h4>
+                                    <h4 class="title">Marketing and Sponsorship Head</h4>
                                 </div>
                                 <ul class="social">
                                     <li><a href="https://instagram.com/aarya.2104?igshid=YmMyMTA2M2Y="
@@ -1734,7 +1742,7 @@
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name">Jivan Karande</h3>
-                                    <h4 class="title">Marketing and Sponsorship</h4>
+                                    <h4 class="title">Marketing and Sponsorship Head</h4>
                                 </div>
                                 <ul class="social">
                                     <li><a href="https://instagram.com/jivankarande_21?igshid=YmMyMTA2M2Y="

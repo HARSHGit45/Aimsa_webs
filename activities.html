@@ -1253,8 +1253,8 @@
   height: 1px;
 }
 .external {
-  overflow: scroll;
-  height: 100vh;
+  overflow: hidden;
+  height: 87vh;
 }
 
 .horizontal-scroll-wrapper {
@@ -1273,6 +1273,7 @@
   padding-bottom: 10rem;
 }
 .img-wrapper {
+  position: relative;
   transform: rotate(90deg);
   display: flex;
   align-items: center;
@@ -1281,17 +1282,20 @@
   transform-origin: 50% 50%;
   transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
   transition: 1s;
+  border: 1px solid transparent;
 }
 
 .img-wrapper:hover {
 	min-height: 65vh;
 	/* animation: enlarge_img 1s ease-in forwards; */
+	border: 150px solid transparent;
+	margin: 0 50px;
 }
 
 @keyframes enlarge_img {
 0% {transform: scale(1) rotate(90deg);
 	 z-index:5;}
-100% {transform: scale(1.4) rotate(90deg);
+100% {transform: scale(1.1) rotate(90deg);
 	 z-index:5;}
 }
 
@@ -1314,7 +1318,7 @@
   transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh) ;
 }
 .fastest {
-  transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh) ;
+  transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-4vh) translateY(-15vh) ;
 }
 .vertical {
    transform: rotate(90deg) translateZ(-.15px) scale(1.15) translateX(0%) translateY(0%) ;
