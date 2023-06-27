@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport">
+    <!--GOOGLE FONTS-->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">  -->
+    <title>ARTIMAS</title>
+    <link rel="icon" type="image/x-icon" href="Artimas fav.png">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        #navbar {
+
+            height: 100vh;
+            background: none;
+            animation: red_art 2s 3.5s forwards linear;
+            /* position: sticky; */
+            top: 0;
+            left: 0;
+            margin: 10px;
+        }
+
+        @keyframes red_art {
+            0% {
+                height: 100vh;
+            }
+
+            100% {
+                height: 13vh;
+                /* background-color: #ff00dde9; */
+            }
+        }
+
+
+
+        a {
+            margin-top: 10px;
+            /* display: inline-block; */
+            text-decoration: none;
+            color: #fff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            align-items: center;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: flicker 2s 2s forwards linear;
+
+            /* height: 150px; */
+            /* background-color: black; */
+
+        }
+
+        @keyframes dim-glow {
+            0% {
+                filter: brightness(150%);
+            }
+
+            50% {
+                filter: brightness(75%);
+            }
+
+            80% {
+                filter: brightness(87%);
+            }
+
+            /* 85% { filter: brightness(20%); } */
+            100% {
+                filter: brightness(175%);
+            }
+        }
+
+        .blink {
+            animation: dim-glow 2s linear infinite;
+
+        }
+
+        .logo-img {
+            max-height: 550px;
+            position: relative;
+            max-width: 100%;
+            object-fit: contain;
+            animation: dim-glow 6s 2s linear infinite, flicker 2.5s linear forwards;
+            z-index: 2;
+            /* box-shadow: 0 0 50px 20px rgba(0, 0, 255, 0.8); */
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+                /* background-color: #ff00dde9; */
+            }
+
+            25% {
+                opacity: 1;
+                /* background-color: #ff00dde9; */
+            }
+
+            30% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+                /* background-color: #ff00dde9; */
+            }
+
+            45% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            65% {
+                opacity: 0;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .container11 {
+            opacity: 0.9;
+            justify-content: center;
+        }
+
+        .content-article {
+            color: white;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .our-team .pic {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 20px 200px rgb(244, 6, 216);
+            border-radius: 20px;
+            background-color: #00000055;
+            border: 7px solid rgb(255, 0, 234);
+        }
+
+        /* .our-team .pic{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 75px 5px #ecb50e;
+		border-radius: 20px;
+        background-color: #00000055;
+        border: 7px solid #f0a30b;
+} */
+
+
+
+        .our-team .pic img {
+            width: 100%;
+            /* height: 25vw; */
+        }
+
+        .our-team .over-layer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            background: linear-gradient(-347deg, #064ab992, #06013add);
+            transition: all 0.5s ease 0s;
+        }
+
+        /* .our-team .over-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+	background: linear-gradient(-45deg, rgba(221, 131, 7, 0.5), rgba(238, 179, 5, 0.5));
+    transition: all 0.5s ease 0s;
+} */
+
+        .our-team:hover .over-layer {
+            bottom: 0;
+        }
+
+        .our-team .over-layer:before {
+            content: "";
+            width: 90%;
+            height: 0;
+            position: absolute;
+            /* top: 5%;
+    left: 5%; */
+            /* border-top: 5px solid rgba(255,255,255,0.7);
+    border-left: 5px solid rgba(255,255,255,0.7); */
+            opacity: 0;
+            /* transition: all 0.5s ease 0.5s; */
+        }
+
+        .our-team:hover .over-layer:before {
+            opacity: 1;
+            height: 90%;
+        }
+
+        /* .our-team .social-links{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    top: 45%;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s ease 1s;
+} */
+        .our-team:hover .social-links {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .our-team .social-links li {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        .our-team .social-links li a {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            display: block;
+            font-size: 13px;
+            color: #fff;
+            background: rgba(11, 32, 56, 0.7);
+        }
+
+        .our-team .team-content {
+            background: #f3f5f7;
+            padding: 30px 25px;
+            align-items: center;
+        }
+
+        .our-team .team-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #5d5e5e;
+            margin: 0 0 5px 0;
+        }
+
+        .our-team .post {
+            display: block;
+            font-size: 16px;
+            font-style: italic;
+            color: #898989;
+            margin-bottom: 15px;
+        }
+
+        .our-team .post:after {
+            content: "";
+            display: block;
+            width: 35px;
+            height: 3px;
+            background: #9c88b9;
+            margin-top: 7px;
+        }
+
+        .our-team .description {
+            font-size: 14px;
+            color: #898989;
+        }
+
+        /* .our-team .read{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px 8px 8px 50px;
+    background: #9c88b9;
+    z-index: 1;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.our-team .read:hover{
+    background: #6dc1b3;
+    text-decoration: none;
+    color: #000;
+}
+.our-team .read:after{
+    content: "";
+    width: 36px;
+    height: 100%;
+    background: #9c88b9;
+    position: absolute;
+    top: 0;
+    right: -18px;
+    transform: skewX(-45deg);
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.our-team .read:hover:after{
+    background: #6dc1b3;
+} */
+        @media screen and (max-width: 990px) {
+            .our-team {
+                margin-bottom: 20px;
+            }
+        }
+
+        div.container-fluid {
+            box-shadow: 0px 30px 150px rgb(244, 6, 216);
+            border-radius: 30px;
+            /* background:linear-gradient(45deg,rgb(58, 11, 58),rgb(176, 94, 108));*/
+            background: linear-gradient(45deg, rgb(58 11 58 / 71%), rgb(176 94 108 / 74%));
+            border: 7px solid rgb(255, 0, 234);
+            padding: 20px;
+            margin: 20px;
+            /* min-width: 800px; */
+            width: 80%;
+            max-width: 1200px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        div.timetable img{
+            width:43em;
+        }
+        .content-article {
+            text-align: justify;
+            margin-left: 20px;
+            font-size: 1.5em;
+            /* min-width: 300px; */
+        }
+
+        .make_sec {
+            margin: auto;
+            margin-top: 6em;
+            margin-bottom: 3em;
+            width: 80vw;
+            height: 0px;
+            box-shadow:
+                0px 5px 20px rgb(101, 34, 255, 10),
+                0px 5px 30px rgb(101, 34, 255, 10);
+            border-radius: 5px;
+            background-color: #00000055;
+            border: 6px solid rgb(56, 6, 235);
+        }
+
+        .col-md-3 {
+            min-width: 200px;
+            max-width: 500px;
+            margin: 1em;
+        }
+
+        .title {
+            font-size: 4em;
+            color: #dfecff;
+            z-index: -1;
+            text-shadow:
+                0 0 5px #91bbff,
+                /* 0 0 10px #6abffc, */
+                0 0 10px #fff;
+            text-align: center;
+        }
+
+        /* footer ends */
+
+        /* button css */
+        .frame {
+            width: 90%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+        }
+
+        .custom-btn {
+            color: #fff;
+            width: 180px;
+            height: 70px;
+            padding: 10px 10px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .btn-6 {
+            background: #08d7e6;
+            border-radius: 15px;
+            line-height: 70px;
+            padding: 0;
+            border: none;
+            box-shadow: 0 0 5px #07f0cd;
+        }
+
+        .btn-6 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 1.7em;
+            text-align: center;
+            align-items: center;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .btn-6 span a {
+            align-items: center;
+            padding: 0.1em;
+        }
+
+        .btn-6:hover {
+            background: transparent;
+        }
+
+
+        .btn-6:before,
+        .btn-6:after {
+            position: absolute;
+            content: "";
+            height: 0%;
+            width: 2px;
+            background: #08abe6;
+            box-shadow: 0 0 5px #b806be;
+        }
+
+        .btn-6:before {
+            right: 0;
+            top: 0;
+            transition: all 500ms ease;
+        }
+
+        .btn-6:after {
+            left: 0;
+            bottom: 0;
+            transition: all 500ms ease;
+        }
+
+        .btn-6:hover:before {
+            transition: all 500ms ease;
+            height: 100%;
+        }
+
+        .btn-6:hover:after {
+            transition: all 500ms ease;
+            height: 100%;
+        }
+
+        .btn-6 span:before,
+        .btn-6 span:after {
+            position: absolute;
+            content: "";
+            background: #0891e6;
+            box-shadow: 0 0 5px #07f0cd;
+        }
+
+        .btn-6 span:before {
+            left: 0;
+            top: 0;
+            width: 0%;
+            height: 2px;
+            transition: all 500ms ease;
+        }
+
+        .btn-6 span:after {
+            right: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            transition: all 500ms ease;
+        }
+
+        .btn-6 span:hover:before {
+            width: 100%;
+        }
+
+        .btn-6 span:hover:after {
+            width: 100%;
+        }
+
+
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
+
+        #footer footer {
+            position: relative;
+            background: #00012700;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* footer::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 100px;
+		height: 1px;
+		width: 100%;
+		background: #AFAFB6;
+	} */
+
+        footer .content {
+            max-width: 1250px;
+            margin: auto;
+            padding: 30px 40px 40px 40px;
+        }
+
+        footer .content .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .content .top .logo-details {
+            color: #fff;
+            font-size: 30px;
+        }
+
+        .content .top .media-icons {
+            display: flex;
+        }
+
+        .content .top .media-icons a {
+            height: 40px;
+            width: 40px;
+            margin: 0 8px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+        }
+
+        .top .media-icons a:nth-child(1) {
+            background: #000000;
+        }
+
+        .top .media-icons a:nth-child(1):hover {
+            color: #4267B2;
+            background: #fff;
+        }
+
+        .top .media-icons a:nth-child(2) {
+            background: #1DA1F2;
+        }
+
+        .top .media-icons a:nth-child(2):hover {
+            color: #1DA1F2;
+            background: #fff;
+        }
+
+        .top .media-icons a:nth-child(3) {
+            background: #E1306C;
+        }
+
+        .top .media-icons a:nth-child(3):hover {
+            color: #E1306C;
+            background: #fff;
+        }
+
+        .top .media-icons a:nth-child(4) {
+            background: #0077B5;
+        }
+
+        .top .media-icons a:nth-child(4):hover {
+            color: #0077B5;
+            background: #fff;
+        }
+
+        .top .media-icons a:nth-child(5) {
+            background: #FF0000;
+        }
+
+        .top .media-icons a:nth-child(5):hover {
+            color: #FF0000;
+            background: #fff;
+        }
+
+        footer .content .link-boxes {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer .content .link-boxes .box {
+            width: calc(100% / 5 - 10px);
+        }
+
+        .content .link-boxes .box .link_name {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .link-boxes .box .link_name::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 35px;
+            background: #fff;
+        }
+
+        .content .link-boxes .box li {
+            margin: 6px 0;
+            list-style: none;
+        }
+
+        .content .link-boxes .box li a {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.4s ease
+        }
+
+        .content .link-boxes .box li a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .content .link-boxes .input-box {
+            margin-right: 55px;
+        }
+
+        .link-boxes .input-box input {
+            height: 40px;
+            width: calc(100% + 55px);
+            outline: none;
+            border: 2px solid #AFAFB6;
+            background: #140B5C;
+            border-radius: 4px;
+            padding: 0 15px;
+            font-size: 15px;
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        .link-boxes .input-box input::placeholder {
+            color: #AFAFB6;
+            font-size: 16px;
+        }
+
+        .link-boxes .input-box input[type="button"] {
+            background: #fff;
+            color: #140B5C;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 4px 0;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .input-box input[type="button"]:hover {
+            opacity: 1;
+        }
+
+        footer .bottom-details {
+            width: 100%;
+            background: #0F0844;
+        }
+
+        footer .bottom-details .bottom_text {
+            max-width: 1250px;
+            margin: auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bottom-details .bottom_text span,
+        .bottom-details .bottom_text a {
+            font-size: 14px;
+            font-weight: 300;
+            color: #fff;
+            opacity: 0.8;
+            text-decoration: none;
+        }
+
+        .bottom-details .bottom_text a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .bottom-details .bottom_text a {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 4000px) {
+            /* #footer{
+			margin-left: 75px;
+		} */
+        }
+
+        @media (max-width: 961px) {
+            #footer {
+                margin-left: 0px;
+            }
+
+            footer .content .link-boxes {
+                flex-wrap: wrap;
+            }
+
+            footer .content .link-boxes .input-box {
+                width: 40%;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            footer {
+                position: relative;
+            }
+
+            .content .top .logo-details {
+                font-size: 26px;
+            }
+
+            .content .top .media-icons a {
+                height: 35px;
+                width: 35px;
+                font-size: 14px;
+                line-height: 35px;
+            }
+
+            footer .content .link-boxes .box {
+                width: calc(100% / 3 - 10px);
+            }
+
+            footer .content .link-boxes .input-box {
+                width: 60%;
+            }
+
+            .bottom-details .bottom_text span,
+            .bottom-details .bottom_text a {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            footer::before {
+                top: 145px;
+            }
+
+            footer .content .top {
+                flex-direction: column;
+            }
+
+            .content .top .media-icons {
+                margin-top: 16px;
+            }
+
+            footer .content .link-boxes .box {
+                width: calc(100% / 2 - 10px);
+            }
+
+            footer .content .link-boxes .input-box {
+                width: 100%;
+            }
+        }
+
+
+        #myVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100vw;
+        }
+
+        .frame h1 {
+            color: rgb(206, 131, 255);
+            /* text-shadow: 0 0 2px 2px whitesmoke; */
+            text-shadow: 0 0 2px #ffd6d6, 0 0 4px #a310ff;
+            font-weight: bolder;
+            font-size: 2.5em;
+        }
+
+        .frame p {
+            text-align: justify;
+            color: white;
+            /* font-weight: bolder; */
+            font-size: 1.5em;
+        }
+
+        .container_sponsor {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .container_sponsor a img {
+            width: 10em;
+            /* margin: 20px; */
+        }
+
+        /* .mobile::before{
+        content: "Everything you want is on the other side of fear";
+        position: fixed;
+        opacity: 0.7;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em;
+        color: #fff;
+        z-index: -1;
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #0ff,
+            0 0 80px #0ff,
+            0 0 90px #0ff,
+            0 0 100px #0ff,
+            0 0 150px #0ff;
+      } */
+    </style>
+</head>
+
+<body>
+    <div class="mobile">
+        <!-- <video autoplay muted loop id="myVideo">
+            <source src="background.mkv" type="video/mp4">
+        </video> -->
+        <div class="container11 ">
+            <div class="logo-container" id="navbar">
+                <img class="logo-img" src="Artimas.png" alt="Logo Image">
+
+            </div>
+            <div class="container-fluid">
+                <div class="mainposter">
+                    <img src="Main.jpeg" alt="pccoe aimsa">
+                </div>
+                <p class="content-article">Looking for a thrilling challenge that will push your technical expertise,
+                    creativity, and critical thinking skills to their limits? Look no further than Artimas - the
+                    must-attend technology and innovation event of the year! With six different challenges designed to
+                    showcase your talents, you'll have the chance to win exciting prizes and show off your skills in a
+                    competitive yet friendly environment. Don't miss out on this opportunity to create, hack, and
+                    innovate - sign up for ARTIMAS hosted by PCCOE AiMSA.</p>
+
+                <!-- <h1 class="blink" style="color: rgb(155, 233, 255);">REGISTRATIONS START FROM 10th April</h1> -->
+            </div>
+
+
+            <div class="make_sec"> </div>
+            <div class="title">
+                EVENTS
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- treasure hunt -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="houdini.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>HOUDINI HEIST</h1>
+                                        <p>Unlock your inner Houdini and challenge your mind with the most versatile
+                                            escape room event of the season - Houdini Heist.</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSe5dIBxDT8vlqaK4D9TBTKM3OgrfXJXh-pGDWZb8akDn0geBA/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLSe5dIBxDT8vlqaK4D9TBTKM3OgrfXJXh-pGDWZb8akDn0geBA/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1csW-p98aXGV97bIKhd74msORYS7bqO6Y/view?usp=share_link','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1csW-p98aXGV97bIKhd74msORYS7bqO6Y/view?usp=share_link"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- hackathon -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="Hackmatrix.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>HACK MATRIX</h1>
+                                        <p>Hack Matrix is an exhilarating hackathon event that brings together
+                                            innovative minds from diverse backgrounds to solve complex challenges using
+                                            cutting-edge technology, creativity, and collaboration.</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScZUqllIerABi348sIt8dRsst-dVTYHbWLWL7w8CcEo_D08Jw/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLScZUqllIerABi348sIt8dRsst-dVTYHbWLWL7w8CcEo_D08Jw/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1hFZvjH_9PIPmPR-S_m3fyywtTE0dmo0U/view?usp=sharing','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1hFZvjH_9PIPmPR-S_m3fyywtTE0dmo0U/view?usp=sharing"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="Adrenaline.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>ADRENALINE RUSH</h1>
+                                        <p>Get ready to show off your Valorant skills in the "Adrenaline Rush"
+                                            tournament. Make your team and Go head-to-head with your peers and battle it
+                                            out for victory.</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScoSF7ddagV4gQ-iF6oE-8gTJeqv-2J_XazZjuYO9L0pno44w/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLScoSF7ddagV4gQ-iF6oE-8gTJeqv-2J_XazZjuYO9L0pno44w/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1bakwK7AKV-5rkoqobvRp8LdKvUb2EgC3/view?usp=sharing','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1bakwK7AKV-5rkoqobvRp8LdKvUb2EgC3/view?usp=sharing"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- poster making -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="Cybernetic.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>CYBERNETIC VISIONS</h1>
+                                        <p>Cybernetic Visions is an engaging poster making event that encourages
+                                            participants to showcase their artistic talent and imagination by designing
+                                            posters that depict a futuristic world enhanced by technology</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeUHi9RL3hcoBrGDIVOJy9kPN2niNSr4h_4xvuqUn1Dp37fgQ/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLSeUHi9RL3hcoBrGDIVOJy9kPN2niNSr4h_4xvuqUn1Dp37fgQ/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/12gydGaNKkz9axU8Q6I01dkcjxMkxwDgb/view?usp=share_link','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/12gydGaNKkz9axU8Q6I01dkcjxMkxwDgb/view?usp=share_link"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photography -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="pixelperfect.jpeg">
+                                <div class="over-layer">
+
+                                    <div class="frame">
+                                        <h1>PIXEL PERFECT</h1>
+                                        <p>Pixel Perfect is a captivating photography competition that invites
+                                            photographers of all skill levels to submit their best shots capturing
+                                            stunning moments, unique perspectives, and exceptional creativity</p>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdFq-WcDYMeUW2yNq15CcNflVSrFn1NXHRu77YKqGfkpADYng/viewform?usp=sf_link', '_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdFq-WcDYMeUW2yNq15CcNflVSrFn1NXHRu77YKqGfkpADYng/viewform?usp=sf_link"
+                                                    target="_blank">REGISTER</a></span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1ApFzE6hM1JZk4A-hUZ_4i998NGGZfUyF/view?usp=sharing','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1ApFzE6hM1JZk4A-hUZ_4i998NGGZfUyF/view?usp=sharing"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- quiz -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="Neurodrain.jpeg">
+                                <div class="over-layer">
+                                    <div class="frame">
+                                        <h1>NEURO DRAIN</h1>
+                                        <p>Gear up for "NeuroDrain" cause it's time for BIG BRAIN.Challenge yourself
+                                            with a mix of multiple-choice as well as open-ended questions.</p>
+
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdxM6e-Vk21o_vX1xSKytGcT9PupkzR4YAmHp0tnhQlX9aWOA/viewform?usp=sf_link','_blank')"><span><a
+                                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdxM6e-Vk21o_vX1xSKytGcT9PupkzR4YAmHp0tnhQlX9aWOA/viewform?usp=sf_link"
+                                                    target="_blank"></a>REGISTER</span></button>
+                                        <br>
+                                        <button class="custom-btn btn-6"
+                                            onclick="window.open('https://drive.google.com/file/d/1Aq5Xrrr-iBS7AMr3MS7opiAVm9Jv5_tw/view?usp=share_link','_blank')"><span><a
+                                                    href="https://drive.google.com/file/d/1Aq5Xrrr-iBS7AMr3MS7opiAVm9Jv5_tw/view?usp=share_link"
+                                                    target="_blank"></a>RULEBOOK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer starts -->
+        </div>
+        <div class="make_sec"> </div>
+
+
+        <div class="title" style="padding-bottom: 5vw;">
+            TIME TABLE
+        </div>
+
+        <div class="container-fluid" style="margin-bottom: 7em; flex-direction: column;">
+            <div class="title" style="z-index: 2; font-size: 2.5em;">
+                Day 1-2
+            </div>
+            <div class="timetable">
+                <img src="TT1.jpg" alt="pccoe aimsa">
+            </div>
+           
+           
+
+            <!-- <h1 class="blink" style="color: rgb(155, 233, 255);">REGISTRATIONS START FROM 10th April</h1> -->
+ </div>
+ <div class="container-fluid " style="flex-direction: column;">
+    <div class="title" style="z-index: 2; font-size: 2.5em;">
+        Day 3-4
+    </div>
+    <div class="timetable">
+        <img src="TT2.jpg" alt="pccoe aimsa">
+    </div>
+ </div>
+        <div class="make_sec"> </div>
+        <div class="title" style="padding-bottom: 5vw;">
+            OUR PROUD SPONSORS
+        </div>
+
+        <div class="container_sponsor">
+            <a href="https://goo.gl/maps/jQa3YWUidUoMv1NP9" target="_blank"><img src="sp.png" alt=""></a>
+            <a href="https://goo.gl/maps/5QqbT7KY2CwEhNPXA" target="_blank"><img src="Loca.png" alt=""></a>
+        </div>
+        <div class="container_sponsor">
+            <a href="https://goo.gl/maps/Pv21aW7C1qUt5Skx6" target="_blank"><img src="Intra fitness.png" alt=""
+                    style="width:14em"></a>
+            <a href="https://goo.gl/maps/HqJqka8DYcVJZi68A" target="_blank"><img src="maharashtra Tyre.png" alt=""></a>
+        </div>
+
+     
+        
+        <div class="make_sec"> </div>
+        <footer class="footer">
+            <div class="content">
+                <di class="top">
+                    <div class="logo-details">
+                        <a href="http://www.pccoepune.com/"><img src="PCCOE.png" width="150px" height="150px"></img></a>
+                        <!-- <span class="logo_name">AiMSA</span> -->
+                    </div>
+                    <div class="media-icons">
+
+                        <a href="https://twitter.com/PCCOEs_AiMSA?t=b9C6FVcVi_5hZUJHYgBySg&s=09"><i
+                                class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com/pccoe_aimsa?igshid=YmMyMTA2M2Y="><i
+                                class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/pccoe-s-aimsa/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100089018106080"><i
+                                class="fa fa-facebook-f"></i></a>
+                        <!-- <a href="mailto:pccoeaimsa2022@gmail.com"><i class="fa fa-envelope me-3"></i></a> -->
+                    </div>
+                    <div class="logo-details">
+                        <img src="AIMSApng.png" width="150px" height="150px"></img>
+                        <!-- <span class="logo_name">AiMSA</span> -->
+                    </div>
+            </div>
+            <p style="color: #d38dff; text-align: center; font-size: 1.5em;">Designed by Webmasters PCCOE AiMSA</p>
+            <p style="color: #ffffff; text-align: center; font-size: 1em;">Copyright <i class="fa fa-copyright"
+                    aria-hidden="true"></i> 2023 ARTIMAS | PCCOE AiMSA</p>
+
+    </div>
+    </footer>
+</body>
+
+</html>
