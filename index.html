@@ -1,9 +1,14 @@
 <!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 
 <head>
     <title>AIMSA</title>
-	<link rel="icon" type="image/x-icon" href="AIMSAfav.png">
+    <link rel="icon" type="image/x-icon" href="AIMSAfav.png">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -17,7 +22,23 @@
 </head>
 
 <style>
-
+    /* #top::before {
+		content: "";
+		position: absolute;
+		display: block;
+		background-color: #000000;
+		background-image: url("images/Aimsabg.png");
+		opacity: 1;
+		top: 0;
+		left: -7.vw;
+		height: 100%;
+		width:100%;
+		background-size:contain;
+		background-repeat: no-repeat;
+		overflow:hidden;
+		z-index: -1;
+		background-position: center;
+	} */
     html {
         scroll-behavior: smooth;
     }
@@ -745,7 +766,7 @@
 
     #container1.fac::after {
         position: absolute;
-        content: "Faculty's Desk";
+        content: "From the desk";
         top: 0;
         left: 0;
         /* animation: makevis 1s forwards linear; */
@@ -910,7 +931,7 @@
     }
 
     figure.snip1390 .profile {
-        width: 100px;
+        width: 170px;
         border-radius: 50%;
         display: inline-block;
         box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
@@ -1364,7 +1385,8 @@
         text-transform: capitalize;
         padding-bottom: 4px;
     }
-    .image-container ~img{
+
+    .image-container~img {
         width: 100%;
         height: 100%;
         border: 5px solid white;
@@ -1403,7 +1425,6 @@
 
 
 <body class="is-preload">
-
     <p style="display: none;"> Pccoe AiMSA is a student association that has been established for the benefit of
         students in the CSE AIML branch at PCCOE. Our mission is to provide a
         platform for students to engage in meaningful academic, social, and professional
@@ -1490,7 +1511,7 @@
         <section id="top" class="one dark cover">
             <div class="container">
                 <div class="fix_dis">
-                    <div class="aim" >
+                    <div class="aim">
                         PCCOE's AiMSA
                     </div>
                     <div id="container1">
@@ -1555,8 +1576,8 @@
                 </div>
                 <div class="input-container">
                     <form id="promptForm" class="input-container">
-                        <label for="prompt"><input style="color: #000000;" type="text" id="prompt" name="prompt" placeholder="Describe the image you want to generate."
-                                required></label>
+                        <label for="prompt"><input style="color: #000000;" type="text" id="prompt" name="prompt"
+                                placeholder="Describe the image you want to generate." required></label>
                         <button id="generateBtn" type="submit">Generate</button>
                     </form>
                 </div>
@@ -1569,34 +1590,59 @@
             <div class="container11">
 
                 <figure class="snip1390">
-                    <img src="HOD.png" alt="CSE AIML HOD" class="profile" />
+                    <img src="HOD.png" alt="profile-sample3" class="profile" />
                     <figcaption>
                         <h2>Dr. Anuradha Thakare</h2>
                         <h4>Head of Department (CSE AI & ML)</h4>
-                        <blockquote>PCCOE offers a four-year under-graduate B.Tech course in Computer Science &
-                            Engineering (Artificial Intelligence and Machine Learning) which aims to develop a strong
-                            foundation by using the principles and technologies that consist of many facets of
-                            Artificial Intelligence including logic, knowledge representation, probabilistic models, and
-                            machine learning. Students will obtain an in-depth knowledge of machine learning and
-                            artificial intelligence by implementing real-world problems in a wide variety of application
-                            domains such as robotics, computer vision, natural language processing, etc. Students will
-                            be experienced in machine learning pipeline, data, models, algorithms and empirics.
-                        </blockquote>
+
                     </figcaption>
                 </figure>
-                <figure class="snip1390 hover"><img src="pallavidhade.jpg" alt="Aimsa Co-ordinator" class="profile" />
+                <figure class="snip1390 hover">
+                    <img src="pallavidhade.jpg" alt="profile-sample5" class="profile" />
                     <!-- <figcaption> -->
                     <h2>Prof. Pallavi Dhade</h2>
                     <h4>SDW Co-ordinator</h4>
-                    <blockquote>AiMSA is the Artificial Intelligence and Machine learning Students Association run by
-                        students of Department of Computer Science & Engineering (AI & ML) at PCCOE, Pune. Team AiMSA
-                        formed in December 2022 with the strong support of our respected HOD, Dr. Anuradha Thakare. The
-                        main objective of the AiMSA is to provide a platform to students to explore their skills and
-                        knowledge through curricular and extracurricular activities in the field of CSE (AI&ML). It is
-                        the managing body that handles all the events in the department. It introduced various Student
-                        Development Cells to the Department like Art Circle, Higher Studies, Communication and
-                        Personality Development Cell, Professional Development Cell, NSS and Sports Cell, Coding Cell,
-                        Photography Cell and ISR.</blockquote>
+
+                </figure>
+            </div>
+
+            <div class="container11">
+
+                <figure class="snip1390">
+                    <img src="atharva.png" alt="profile-sample3" class="profile" />
+                    <figcaption>
+                        <h2>Atharva Joshi</h2>
+                        <h4>President</h4>
+                        <blockquote>I am Atharva Joshi, and it is an immense honor to serve as the President of AiMSA.
+                            "We are new, but that doesn't mean we are weak." These words encapsulate the spirit of
+                            AiMSA. While we may be a young organization, our determination, passion, and commitment to
+                            excellence are unwavering. Our team comprises talented individuals from diverse backgrounds,
+                            each bringing unique skills and perspectives to the table.
+                            My Team, Team AiMSA is One Unit; A force to be reckoned with and we believe to achieve
+                            greater heights with each new milestone we unlock.
+                            At AiMSA, we are driven by the vision of a smarter age, where the power of artificial
+                            intelligence and cutting-edge technologies revolutionize our way of living.
+                            As we navigate this exciting path forward, we promise to uphold the values of transparency,
+                            integrity, and inclusivity. Our efforts will be focused on fostering innovation, promoting
+                            research, and ensuring that the benefits of AI reach every student.
+                            We Plan to co-ordinate and conduct various activities which display the power of AI Today!
+                            I invite you to join us on this remarkable journey. Together, we can shape a future where AI
+                            serves as a force for good and enhances the lives of people everywhere.
+                        </blockquote>
+                    </figcaption>
+                </figure>
+                <figure class="snip1390 hover">
+                    <img src="parth s.png" alt="profile-sample5" class="profile" />
+                    <!-- <figcaption> -->
+                    <h2>Parth Singhal</h2>
+                    <h4>Vice President</h4>
+                    <blockquote>I am honored to serve as the Vice President of PCCOE AiMSA, and I
+                        address you with great enthusiasm. Together, we have the power to shape the future of
+                        technology. Let us embrace learning, innovation, and exceeding expectations. Our department
+                        thrives on diversity, inclusivity, and mutual support. We encourage each other to explore beyond
+                        the boundaries of our campus and make a positive impact on society. In the face of challenges,
+                        resilience will be our driving force. Together, we will leave an indelible mark on the world of
+                        technology and inspire generations to come.</blockquote>
                     <!-- </figcaption> -->
                 </figure>
             </div>
@@ -1611,7 +1657,7 @@
                     <div class="column12">
                         <div class="effect-10">
                             <div class="effect-img">
-                                <img src="photo1-min.JPG" alt="Pccoe Aimsa">
+                                <img src="photo1-min.JPG" alt="Team Image">
                             </div>
                             <div class="effect-text">
                                 <h2 style=" color: aliceblue; font-weight: normal; top: 0;">ABOUT US</h2>
@@ -1639,9 +1685,6 @@
         <section id="contact" class="four">
             <div class="container">
 
-                <!-- <header>
-					<h2>Our Team</h2>
-				</header> -->
 
                 <p>Our team is a diverse group of individuals with different backgrounds, skills, and expertise. We
                     share a common goal of working together to achieve our objectives and deliver results that exceed
@@ -1653,7 +1696,7 @@
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="our-team">
                                 <div class="picture">
-                                    <img class="img-fluid" src="atharva.png" alt="Pccoe Aimsa President">
+                                    <img class="img-fluid" src="atharva.png">
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name">Atharva Joshi</h3>
@@ -1673,7 +1716,7 @@
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="our-team">
                                 <div class="picture">
-                                    <img class="img-fluid" src="parth s.png" alt="Pccoe-AiMSA Vice President">
+                                    <img class="img-fluid" src="parth s.png">
                                 </div>
                                 <div class="team-content">
                                     <h3 class="name">Parth Singhal</h3>
@@ -2100,7 +2143,7 @@
 
             // Call the updateCanvas function again after a delay
             if (counter < limit) {
-    // Call the function again after a certain delay
+                // Call the function again after a certain delay
                 setTimeout(updateCanvas, 1000);
             }
         }
@@ -2126,10 +2169,10 @@
                 errorMessage.innerText = "Please enter a prompt";
                 return;
             }
-            counter=0;
-            canvas.style.display='block';
+            counter = 0;
+            canvas.style.display = 'block';
             updateCanvas();
-            
+
 
             // Clear error message if prompt is not empty
             errorMessage.innerText = "";
@@ -2174,7 +2217,7 @@
                     // imageContainer.style.width = 'fit-content' 
 
                     console.log("Image generated successfully!");
-                    canvas.style.display='none'
+                    canvas.style.display = 'none'
                 },
                 error: function (xhr, status, error) {
                     console.error("Error:", error);
