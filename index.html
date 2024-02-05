@@ -1569,7 +1569,7 @@
                             <p>Register</p>
                         </span></a>
                         </li> -->
-                        <li><a href="https://artimas.pccoeaimsa.org" id="contact-link"><span class="icon solid fa-desktop ">
+                        <li><a href="" id="history-link" target="_blank" onclick="openWebsite()"><span class="icon solid fam fa-desktop">
                                     <p>ARTIMAS</p>
                                 </span></a>
                         </li>
@@ -2519,16 +2519,14 @@
 
 
     </script>
- <script>
-    // Get the element by its ID
-    var contactLink = document.getElementById("contact-link");
 
-    // Add an onclick event handler
-    contactLink.onclick = function() {
-        // Redirect to the specified link
-        window.location.href = "https://artimas.pccoeaimsa.org/";
-    };
+<script>
+    function openWebsite() {
+        var websiteURL = 'https://artimas.pccoeaimsa.org/';
+        window.open(websiteURL, '_blank');
+    }
 </script>
+
     </div>
 </body>
 
