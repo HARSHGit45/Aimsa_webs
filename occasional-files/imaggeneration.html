@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Craion API</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.6.0/fetch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/craion/0.1.0/craion.min.js"></script>
+  <script type="module" src="">
+    const Craion = {
+  generateImage: async (prompt) => {
+    const url = `https://api.craion.com/v1/generate`;
+    const data = {
+      prompt,
+      temperature: 0.5,
+      max_tokens: 512,
+      output_format: "image/png",
+    };
+    const response = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const image = await response.blob();
+    return image;
+  },
+};
+
+const generateImage = () => {
+  const prompt = document.getElementById("prompt").value;
+  const image = Craion.generateImage(prompt);
+  document.getElementById("image").src = URL.createObjectURL(image);
+};
+
+  </script>
+  <style>
+    img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Craion API</h1>
+  <input type="text" id="prompt">
+  <button onclick="generateImage()">Generate Image</button>
+  <img id="image">
+</body>
+</html>
