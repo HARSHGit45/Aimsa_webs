@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiMSA Announcements</title>
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-color: #EAF2E3;
+        }
+
+        .button {
+            float: right;
+            margin: 0px 50px 0 0;
+            background-color: #E75448;
+            padding: 10px 15px;
+            color: white;
+            font-family: helvetica, arial, sans-serif;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        a.button {
+            text-decoration: none;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        /* BOARD */
+        #board {
+            padding: 100px 30px 30px;
+            margin-top: 40px;
+            overflow-y: visible;
+        }
+
+        /* NOTE */
+        .text p {
+            font-family: 'Comic Sans', helvetica, arial, sans-serif;
+        }
+
+        .note {
+            float: left;
+            display: block;
+            position: relative;
+            padding: 1em;
+            width: 300px;
+            min-height: 300px;
+            margin: 0 30px 30px 0;
+            background: linear-gradient(top, rgba(0, 0, 0, .05), rgba(0, 0, 0, .25));
+            background-color: #FFFD75;
+            box-shadow: 5px 5px 10px -2px rgba(33, 33, 33, .3);
+            transform: rotate(2deg) skew(-1deg, 1deg);
+            transition: transform .15s;
+            z-index: 1;
+        }
+
+        .note:hover {
+            cursor: move;
+        }
+
+        textarea {
+            background-color: transparent;
+            border: none;
+            resize: vertical;
+            font-family: "Gloria Hallelujah", cursive;
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+            font-size: 12pt;
+        }
+
+        textarea:focus {
+            outline: none;
+            border: none;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2) inset;
+        }
+        /* Add this style to your existing style section */
+        .hidden-link {
+            visibility: hidden;
+        }
+
+        .text:hover .hidden-link {
+            visibility: visible;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <h1 > <center>Announcements</center></h1>
+    <!-- <a href="javascript:;" class="button add_new">Add New Note</a> -->
+    <div id="board">
+        <!-- Notice 1: Recruitment Notice Header -->
+        <div class="note draggable">
+            <div class="text">
+                <h2>Recruitment Notice - AiMSA</h2>
+                <h3>Roles Available</h3>
+                <ul>
+                    <li>Management (6 vacancies)</li>
+                    <li>Technical and Design (4 vacancies)</li>
+                    <li>Non-Technical (6 vacancies)</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Notice 3: Application Details -->
+        <div class="note draggable">
+            <div class="text">
+                <h3>Application Details</h3>
+                <p>To apply, please fill out the Google Form. Make sure to complete the form accurately and provide all the necessary information.</p>
+                <p><strong>Application Deadline:</strong> 31st December 2023</p>
+                <p class="hidden-link invisible"><a href="https://forms.gle/H2zzpULV8vs8pFsg6">https://forms.gle/H2zzpULV8vs8pFsg6</a></p>
+                
+                <p>Please note that you can apply for any one of the three roles based on your interests and skills.</p>
+            </div>
+        </div>
+
+        <!-- <div class="note draggable">
+            <div class="text">
+                <h3>Application Details</h3>
+                <p>Hover over this note to reveal the application link!</p>
+                <p class="hidden-link invisible"><a href="https://forms.gle/H2zzpULV8vs8pFsg6">https://forms.gle/H2zzpULV8vs8pFsg6</a></p>
+            </div>
+        </div> -->
+
+        <!-- Notice 4: Contact Information -->
+        <div class="note draggable">
+            <div class="text">
+                <h3>Contact Information</h3>
+                <p>For more information about AiMSA and the recruitment process, please contact our secretaries:</p>
+                <p><strong>Soham Narsale:</strong></p>
+                <p>E-mail: soham.narsale21@pccoepune.org</p>
+                <p>Contact: +91-9607005055</p>
+                <p><strong>Lokesh Kad:</strong></p>
+                <p>E-mail: lokesh.kad21@pccoepune.org</p>
+                <p>Contact: +91-9623702607</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $(function () {
+            // Check if the screen width is greater than 768px (typical width for tablets and PCs)
+            if ($(window).width() > 768) {
+                // Randomize note positions for PC
+                $(".draggable").each(function () {
+                    var topPos = Math.floor(Math.random() * 300);
+                    var leftPos = Math.floor(Math.random() * 300);
+                    $(this).css({ top: topPos, left: leftPos });
+                });
+
+                // Make notes draggable
+                $(".draggable").draggable();
+            }
+        });
+    </script>
+</body>
+</html>
